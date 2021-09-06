@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import walletLogo from '../images/wallet.png';
 
 class Header extends Component {
   constructor(props) {
     super(props);
 
     this.updateTotal = this.updateTotal.bind(this);
+  }
+
+  componentDidMount() {
+    const h2 = document.querySelector('.title-wallet');
+    h2.classList.add('view-title');
   }
 
   updateTotal() {
@@ -24,9 +30,27 @@ class Header extends Component {
 
     return (
       <header>
-        <span data-testid="email-field">{userEmail}</span>
-        <span data-testid="total-field">{this.updateTotal()}</span>
-        <span data-testid="header-currency-field">BRL</span>
+        <div className="wallet-logo">
+          <div className="box-logo-wallet">
+            <img src={ walletLogo } alt="imagem carteira" className="logo-wallet"/>
+          </div>
+          <h2 className="title-wallet">MyWALLET</h2>
+        </div>
+        <div className="info-user">
+          <span
+            data-testid="email-field"
+            className="user-email"
+          >
+            {userEmail}
+          </span>
+          <div className="total-wallet">
+            <span className="total-brl">Total gasto:</span>
+            <div>
+              <span data-testid="total-field">{this.updateTotal()}</span>
+              <span data-testid="header-currency-field">BRL</span>
+            </div>
+          </div>
+        </div>
       </header>
     );
   }

@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { actionRegisterUser } from '../actions';
 import { Inputs, Button } from '../components';
+import walletLogo from '../images/wallet.png';
+import '../CSS/Login.css';
 
 class Login extends React.Component {
   constructor() {
@@ -17,6 +19,7 @@ class Login extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.validation = this.validation.bind(this);
+    this.setNewClasses = this.setNewClasses.bind(this);
   }
 
   handleChange({ target: { name, value } }) {
@@ -36,35 +39,58 @@ class Login extends React.Component {
     const { history, registerUser } = this.props;
     const { email } = this.state;
     registerUser(email);
-    history.push('/carteira');
+    this.setNewClasses();
+    setTimeout(() => {history.push('/carteira')}, 2000);
+  }
+
+  setNewClasses() {
+    const circle = document.querySelector('.boxlogo-login');
+    circle.classList.add('transitionLogin');
+    const img = document.querySelector('.logo-login');
+    img.classList.add('transitionLoginImg');
+    const form = document.querySelector('.form-login');
+    form.classList.add('fadeLogin');
+    const h2 = document.querySelector('.title-login');
+    h2.classList.add('fadeLogin');
   }
 
   render() {
     const { disabled } = this.state;
     return (
-      <form>
-        <fieldset>
-          <Inputs
-            name="email"
-            page="login"
-            type="text"
-            label="E-mail"
-            onHandleChange={ this.handleChange }
-          />
-          <Inputs
-            name="password"
-            page="login"
-            type="password"
-            label="Senha"
-            onHandleChange={ this.handleChange }
-          />
-          <Button
-            name="Entrar"
-            onHandleClick={ this.handleClick }
-            disabled={ disabled }
-          />
-        </fieldset>
-      </form>
+      <div className="login-page">
+        <div className="container-login">
+          <div className="boxlogo-login">
+            <img src={ walletLogo } alt="imagem carteira" className="logo-login"/>
+          </div>
+          <h2 className="title-login">MyWALLET</h2>
+        </div>
+        <form className="form-login">
+          <fieldset>
+            <Inputs
+              name="email"
+              page="login"
+              type="text"
+              holder="E-mail"
+              onHandleChange={ this.handleChange }
+              className="input-login"
+            />
+            <Inputs
+              name="password"
+              page="login"
+              type="password"
+              holder="Senha"
+              onHandleChange={ this.handleChange }
+              className="input-login"
+            />
+            <Button
+              name="Entrar"
+              onHandleClick={ this.handleClick }
+              disabled={ disabled }
+              className="btn-login"
+            />
+          </fieldset>
+        </form>
+      </div>
     );
   }
 }

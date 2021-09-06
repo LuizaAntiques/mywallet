@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { Header } from '../components';
 import Table from '../components/Table';
 import { FormWallet, FormEdit } from '../forms';
+import '../CSS/Wallet.css';
 
 class Wallet extends React.Component {
   render() {

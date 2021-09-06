@@ -47,7 +47,7 @@ class FormEdit extends Component {
     addEditExpense(newExpenseList);
   }
 
-  renderSelects(name, label, options, value) {
+  renderSelects(name, label, options, value, className) {
     return (
       <Select
         name={ name }
@@ -56,6 +56,7 @@ class FormEdit extends Component {
         onHandleChange={ this.handleChange }
         options={ options }
         value={ value }
+        className={`select-${ className }`}
       />
     );
   }
@@ -67,7 +68,7 @@ class FormEdit extends Component {
     const { value, description, currency, method, tag } = this.state;
 
     return (
-      <form>
+      <form className="form-edit">
         <Inputs
           value={ value }
           name="value"
@@ -75,7 +76,10 @@ class FormEdit extends Component {
           type="number"
           label="Valor"
           onHandleChange={ this.handleChange }
-        />
+          />
+        {this.renderSelects('currency', 'Moeda', currencies, currency, 'psize')}
+        {this.renderSelects('method', 'Método de pagamento', methodOptions, method, 'msize')}
+        {this.renderSelects('tag', 'Tag', tagOptions, tag, 'msize')}
         <Inputs
           value={ description }
           name="description"
@@ -83,11 +87,13 @@ class FormEdit extends Component {
           type="text"
           label="Descrição"
           onHandleChange={ this.handleChange }
+          className="description"
         />
-        {this.renderSelects('currency', 'Moeda', currencies, currency)}
-        {this.renderSelects('method', 'Método de pagamento', methodOptions, method)}
-        {this.renderSelects('tag', 'Tag', tagOptions, tag)}
-        <Button name="Editar despesa" onHandleClick={ this.handleClick } />
+        <Button
+          name="Editar despesa"
+          onHandleClick={ this.handleClick }
+          className="btn-edit-expense"
+        />
       </form>
     );
   }

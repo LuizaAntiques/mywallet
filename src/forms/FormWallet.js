@@ -45,20 +45,14 @@ class FormWallet extends Component {
     const { currencies } = this.props;
 
     return (
-      <form>
+      <form className="form-add">
         <Inputs
           name="value"
           page="wallet"
           type="number"
           label="Valor"
           onHandleChange={ this.handleChange }
-        />
-        <Inputs
-          name="description"
-          page="wallet"
-          type="text"
-          label="Descrição"
-          onHandleChange={ this.handleChange }
+          className="input-value"
         />
         <Select
           name="currency"
@@ -66,6 +60,7 @@ class FormWallet extends Component {
           label="Moeda"
           onHandleChange={ this.handleChange }
           options={ currencies }
+          className="select-psize"
         />
         <Select
           name="method"
@@ -73,6 +68,7 @@ class FormWallet extends Component {
           label="Método de pagamento"
           onHandleChange={ this.handleChange }
           options={ methodOptions }
+          className="select-msize"
         />
         <Select
           name="tag"
@@ -80,8 +76,21 @@ class FormWallet extends Component {
           label="Tag"
           onHandleChange={ this.handleChange }
           options={ tagOptions }
+          className="select-msize"
         />
-        <Button name="Adicionar despesa" onHandleClick={ this.handleClick } />
+        <Inputs
+          name="description"
+          page="wallet"
+          type="text"
+          label="Descrição"
+          onHandleChange={ this.handleChange }
+          className="description"
+        />
+        <Button
+          name="Add despesa"
+          onHandleClick={ this.handleClick }
+          className="btn-add-expense"
+        />
       </form>
     );
   }

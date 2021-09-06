@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.login-page {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+  justify-content: space-evenly;
+}
+
+.container-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  width: 25vw;
+  position: absolute;
+  top: 10vh;
+  right: 16vw;
+  border: 2px solid #757575;
+  border-radius: 30px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.boxlogo-login {
+  border: 2px solid #C4C4C4;
+  border-radius: 50%;
+  width: 240px;
+  height: 240px;
+  position:absolute;
+  left: 20vw;
+  top: 17vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-login {
+  width: 190px;
+  height: 190px;
+}
+
+.title-login {
+  font-size: 11vh;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  position: absolute;
+  top: 58vh;
+  left: 14.5vw
+}
+
+.input-login {
+  border: 4px solid #C4C4C4;
+  border-radius: 8px;
+  width: 17vw;
+  height: 8vh;
+  padding: 1vw;
+  font-size: 15px;
+  color: #757575;
+}
+
+.btn-login {
+  border-radius: 8px;
+  width: 13vw;
+  height: 9vh;
+  padding: 1vw;
+  margin-top: 11vh;
+  background-color: #424242;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0.3em;
+  border: none;
+}
+
+.btn-login:hover {
+  cursor: pointer;
+  border: 1px solid #C4C4C4;
+  font-size: 21px;
+}
+
+.btn-login:disabled {
+  background-color: #757575;
+  color: #C4C4C4;
+  cursor: initial;
+  font-size: 20px;
+  border: none;
+}
+
+.fadeLogin {
+  animation: fadeOut 2s;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  } 100% {
+    opacity: 0;
+  }
+}
+
+.transitionLogin {
+  opacity: 1;
+  animation: circleTransition 2s;
+}
+
+@keyframes circleTransition {
+  0% {
+    width: 240px;
+    height: 240px;
+    position:absolute;
+    left: 20vw;
+    top: 17vh;
+    opacity: 1;
+  } 100% {
+    width: 48px;
+    height: 48px;
+    position:absolute;
+    left: 1vw;
+    top: 0.7vh;
+    opacity: 1;
+  }
+}
+
+.transitionLoginImg {
+  opacity: 1;
+  animation: imgTransition 2s;
+}
+
+@keyframes imgTransition {
+  0% {
+    width: 190px;
+    height: 190px;
+    opacity: 1;
+  } 100% {
+    width: 38px;
+    height: 38px;
+    opacity: 1;
+  }
+}
