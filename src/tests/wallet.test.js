@@ -144,11 +144,11 @@ describe('7 - Implemente a lógica para preencher as opções do campo "Moedas",
 });
 
 describe('8 - Desenvolva a opção de "Adicionar despesa" na sua tabela de gastos', () => {
-  test('Crie um botão com o texto \'Adicionar despesa\' que salva as informações da despesa no estado global e atualiza a soma de despesas no header', async () => {
+  test('Crie um botão com o texto \'Add despesa\' que salva as informações da despesa no estado global e atualiza a soma de despesas no header', async () => {
     const { store } = renderWithRouterAndStore(<Wallet />, '/carteira');
 
     const addButton = await screen.findByRole('button', {
-      name: /adicionar despesa/i,
+      name: /add despesa/i,
     });
     const valueInput = await screen.findByLabelText(/valor/i);
     const currencyInput = await screen.findByRole('combobox', {

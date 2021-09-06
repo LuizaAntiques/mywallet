@@ -62,7 +62,7 @@ class Table extends Component {
 
   render() {
     return (
-      <table cellspacing="0">
+      <table cellSpacing="0">
         <thead>
           <tr className="table-header">
             <th className="value-tbl">Valor</th>

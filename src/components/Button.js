@@ -19,7 +19,7 @@ class Button extends Component {
 }
 
 Button.propTypes = {
-  name: PropTypes.string,
+  name: PropTypes.any,
   onHandleClick: PropTypes.func.isRequired,
   disabled: PropTypes.bool,
   testid: PropTypes.string,

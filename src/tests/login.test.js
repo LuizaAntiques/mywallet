@@ -116,6 +116,9 @@ describe('3 - Utilize o Redux para salvar no estado global as informações da p
     userEvent.type(senha, VALID_PASSWORD);
     fireEvent.click(button);
 
-    expect(history.location.pathname).toBe('/carteira');
+    setTimeout(
+      () => (expect(history.location.pathname).toBe('/carteira')),
+      3000
+    )
   });
 });
