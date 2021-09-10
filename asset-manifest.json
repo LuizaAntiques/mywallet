@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/mywallet/static/css/main.97772349.chunk.css",
-    "main.js": "/mywallet/static/js/main.10378edf.chunk.js",
-    "main.js.map": "/mywallet/static/js/main.10378edf.chunk.js.map",
-    "runtime-main.js": "/mywallet/static/js/runtime-main.2be067d6.js",
-    "runtime-main.js.map": "/mywallet/static/js/runtime-main.2be067d6.js.map",
-    "static/js/2.c2493121.chunk.js": "/mywallet/static/js/2.c2493121.chunk.js",
-    "static/js/2.c2493121.chunk.js.map": "/mywallet/static/js/2.c2493121.chunk.js.map",
+    "main.js": "/mywallet/static/js/main.52620111.chunk.js",
+    "main.js.map": "/mywallet/static/js/main.52620111.chunk.js.map",
+    "runtime-main.js": "/mywallet/static/js/runtime-main.1e996af5.js",
+    "runtime-main.js.map": "/mywallet/static/js/runtime-main.1e996af5.js.map",
+    "static/js/2.eb0c5d4b.chunk.js": "/mywallet/static/js/2.eb0c5d4b.chunk.js",
+    "static/js/2.eb0c5d4b.chunk.js.map": "/mywallet/static/js/2.eb0c5d4b.chunk.js.map",
     "index.html": "/mywallet/index.html",
-    "precache-manifest.10768c025e33ddf4c1857e790bb032e6.js": "/mywallet/precache-manifest.10768c025e33ddf4c1857e790bb032e6.js",
+    "precache-manifest.233af3936d2af117668684f9d21dd88d.js": "/mywallet/precache-manifest.233af3936d2af117668684f9d21dd88d.js",
     "service-worker.js": "/mywallet/service-worker.js",
     "static/css/main.97772349.chunk.css.map": "/mywallet/static/css/main.97772349.chunk.css.map",
-    "static/js/2.c2493121.chunk.js.LICENSE.txt": "/mywallet/static/js/2.c2493121.chunk.js.LICENSE.txt",
+    "static/js/2.eb0c5d4b.chunk.js.LICENSE.txt": "/mywallet/static/js/2.eb0c5d4b.chunk.js.LICENSE.txt",
     "static/media/wallet.png": "/mywallet/static/media/wallet.a5674583.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.2be067d6.js",
-    "static/js/2.c2493121.chunk.js",
+    "static/js/runtime-main.1e996af5.js",
+    "static/js/2.eb0c5d4b.chunk.js",
     "static/css/main.97772349.chunk.css",
-    "static/js/main.10378edf.chunk.js"
+    "static/js/main.52620111.chunk.js"
   ]
 }
