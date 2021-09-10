@@ -40,7 +40,7 @@ class Login extends React.Component {
     const { email } = this.state;
     registerUser(email);
     this.setNewClasses();
-    setTimeout(() => {history.push('/carteira')}, 2000);
+    setTimeout(() => {history.push('/mywallet/carteira')}, 2000);
   }
 
   setNewClasses() {

@@ -1,5 +1,6 @@
 {
-  "name": "sd-0x-project-trybewallet",
+  "name": "project-mywallet",
+  "homepage": "https://luizaantiques.github.io/mywallet/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -19,10 +20,7 @@
     "redux-thunk": "2.3.0",
     "stylelint-order": "4.1.0"
   },
-  "homepage": "https:\/\/luizaantiques.github.io/mywallet",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

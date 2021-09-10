@@ -14,7 +14,7 @@ export const getStore = (initialState) => {
 };
 
 export const renderWithRouterAndStore = (component, routeConfigs = {}, initialState) => {
-  const route = routeConfigs.route || '/';
+  const route = routeConfigs.route || '/mywallet';
   const store = getStore(initialState);
   const history = routeConfigs.history
     || createMemoryHistory({ initialEntries: [route] });
