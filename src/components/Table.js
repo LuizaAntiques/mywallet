@@ -43,13 +43,13 @@ class Table extends Component {
           <td>{item.description}</td>
           <td className="td-btns">
             <Button
-              name={ <img className ="icon" src={ pencil } /> }
+              name={ <img className ="icon" src={ pencil } alt="botão editar" /> }
               testid="edit-btn"
               onHandleClick={ () => this.editButton(item.id) }
               className="btn-edit"
             />
             <Button
-              name={ <img className ="icon" src={ trash } /> }
+              name={ <img className ="icon" src={ trash } alt="botão excluir" /> }
               testid="delete-btn"
               onHandleClick={ () => this.deleteButton(item.id) }
               className="btn-del"
